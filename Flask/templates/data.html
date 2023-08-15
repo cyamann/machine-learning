@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html> 
+{% extends "base.html" %}
+{% block content %}
+<h3>Flask + Machine Learning Example</h3>
+    <form method="post">
+        <label for="MolLogP">MolLogP</label>
+        <input type="text" id="MolLogP" name="MolLogP">
+        <br>
+        <label for="MolW">MolW</label>
+        <input type="text" id="MolW" name="MolW">
+        <br>
+        <label for="NumRotatable">NumRotatable</label>
+        <input type="text" id="NumRotatable" name="NumRotatable">
+        <br>
+        <label for="Aromatic">Aromatic</label>
+        <input type="text" id="Aromatic" name="Aromatic">
+        <br>
+        <button type="submit">Predict</button>
+    </form>
+    {% if predict_solubility %}
+    <p>Predicted Solubility: {{ predict_solubility }}</p>
+    {% endif %}
+{% endblock %}

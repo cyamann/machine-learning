@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html> 
+{% extends "base.html" %}
+
+{% block content %}
+<h3>Flask + Machine Learning Example</h3>
+<form method="post" action="/NBA.html">
+    <label for="age">Age</label>
+    <input type="text" id="age" name="age"><br>
+
+    <label for="G">G</label>
+    <input type="text" id="G" name="G"><br>
+
+    <label for="GS">GS</label>
+    <input type="text" id="GS" name="GS"><br>
+
+    <label for="MP">MP</label>
+    <input type="text" id="MP" name="MP"><br>
+
+    <label for="FG">FG</label>
+    <input type="text" id="FG" name="FG"><br>
+
+    <label for="FGA">FGA</label>
+    <input type="text" id="FGA" name="FGA"><br>
+
+    <label for="FG_percent">FG%</label>
+    <input type="text" id="FG_percent" name="FG_percent"><br>
+
+    <label for="ThreeP">3P</label>
+    <input type="text" id="ThreeP" name="ThreeP"><br>
+
+    <label for="ThreePA">3PA</label>
+    <input type="text" id="ThreePA" name="ThreePA"><br>
+
+    <label for="ThreeP_percent">3P%</label>
+    <input type="text" id="ThreeP_percent" name="ThreeP_percent"><br>
+
+    <label for="TwoP">2P</label>
+    <input type="text" id="TwoP" name="TwoP"><br>
+
+    <label for="TwoPA">2PA</label>
+    <input type="text" id="TwoPA" name="TwoPA"><br>
+
+    <label for="TwoP_percent">2P%</label>
+    <input type="text" id="TwoP_percent" name="TwoP_percent"><br>
+
+    <label for="eFG_percent">eFG%</label>
+    <input type="text" id="eFG_percent" name="eFG_percent"><br>
+
+    <label for="FT">FT</label>
+    <input type="text" id="FT" name="FT"><br>
+
+    <label for="FTA">FTA</label>
+    <input type="text" id="FTA" name="FTA"><br>
+
+    <label for="FT_percent">FT%</label>
+    <input type="text" id="FT_percent" name="FT_percent"><br>
+
+    <label for="ORB">ORB</label>
+    <input type="text" id="ORB" name="ORB"><br>
+
+    <label for="DRB">DRB</label>
+    <input type="text" id="DRB" name="DRB"><br>
+
+    <label for="TRB">TRB</label>
+    <input type="text" id="TRB" name="TRB"><br>
+
+    <label for="AST">AST</label>
+    <input type="text" id="AST" name="AST"><br>
+
+    <label for="STL">STL</label>
+    <input type="text" id="STL" name="STL"><br>
+
+    <label for="BLK">BLK</label>
+    <input type="text" id="BLK" name="BLK"><br>
+
+    <label for="TOV">TOV</label>
+    <input type="text" id="TOV" name="TOV"><br>
+
+    <label for="PF">PF</label>
+    <input type="text" id="PF" name="PF"><br>
+
+    <label for="PTS">PTS</label>
+    <input type="text" id="PTS" name="PTS"><br>
+
+    <button type="submit">Predict</button>
+</form>
+
+{% if predict_NBA %}
+    <p>Predicted NBA Player: {{ predict_NBA }}</p>
+{% endif %}
+
+
+{% endblock %}
